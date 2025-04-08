@@ -33,7 +33,7 @@
 ## Yêu cầu chức năng chi tiết
 
 <details>
-  <summary>Quản lý lớp môn học</summary>
+  <summary>Quản lý lớp học</summary>
 
 - Hiển thị thông tin lớp môn học: môn học, mã môn, sĩ số, giảng viên, thời khóa biểu, …
 - Tìm kiếm các lớp môn học theo mã lớp, giảng viên dạy.
@@ -44,7 +44,7 @@
 </details>
 
 <details>
-  <summary>Quản lý chi tiết lớp môn học</summary>.
+  <summary>Quản lý chi tiết lớp kỹ năng</summary>.
 - Danh sách học viên trong lớp học
   - Xem tổng quan, thống kê điểm số học viên trong lớp.
   - Xem thông tin học viên trong lớp.
