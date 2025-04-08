@@ -1,4 +1,4 @@
-##          ẢNH DATABASE DỰ KIẾN
+##          ẢNH SƠ ĐỒ LỚP DỰ KIẾN
 ![image](https://github.com/user-attachments/assets/0ed43102-e8f1-439d-a3ce-2e2fbca09492)
 
 ##          MÔ TẢ CÁC CHỨC NĂNG CHỨC
