@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5ad1b4120a2e479b92f4972a9e43f5cf" Name="Diagram1">
+        <EntityTypeShape EntityType="ManagermentEnglishModel.AbsentCalendar" Width="1.5" PointX="8.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Admin" Width="1.5" PointX="11.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Class" Width="1.5" PointX="3" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.ComponentScore" Width="1.5" PointX="8.25" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.CourseRegister" Width="1.5" PointX="11.25" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.DatabaseImageTable" Width="1.5" PointX="3.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.DetailScore" Width="1.5" PointX="13.5" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Document" Width="1.5" PointX="11.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Examination" Width="1.5" PointX="8.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Faculty" Width="1.5" PointX="6" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Faculty_TrainingForm" Width="1.5" PointX="6" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Folder" Width="1.5" PointX="11.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.OTP" Width="1.5" PointX="6.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Semester" Width="1.5" PointX="3.75" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Student" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Subject" Width="1.5" PointX="3.75" PointY="25.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.SubjectClass" Width="1.5" PointX="6" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Teacher" Width="1.5" PointX="8.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.TrainingForm" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.TrainingScore" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.User_UserRole_UserInfo" Width="1.5" PointX="14.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.UserRole" Width="1.5" PointX="6.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.UserRole_UserInfo" Width="1.5" PointX="9" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.UserRole_UserInfoItem" Width="1.5" PointX="11.25" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ManagermentEnglishModel.Users" Width="1.5" PointX="9" PointY="2.25" IsExpanded="true" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__AbsentCal__IdSub__1332DBDC" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Admin__IdUsers__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Class__IdFaculty__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Class__IdTeacher__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Class__IdThumbna__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Class__IdTrainin__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Component__IdSub__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__DetailSco__IdCom__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__CourseReg__IdStu__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__CourseReg__IdSub__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__SubjectCl__IdThu__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Users__IdAvatar__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__DetailSco__IdStu__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Document__IdFold__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Document__IdPost__1EA48E88" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Document__IdSubj__208CD6FA" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Examinati__IdSub__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Faculty_T__IdFac__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Student__IdFacul__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Teacher__IdFacul__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Faculty_T__IdTra__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Folder__IdPoster__1BC821DD" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Folder__IdSubjec__1AD3FDA4" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Users__IdOTP__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__SubjectCl__IdSem__778AC167" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__TrainingS__IdSem__0F624AF8" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Student__IdTrain__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Student__IdUsers__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__TrainingS__IdStu__10566F31" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__SubjectCl__IdSub__76969D2E" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__SubjectCl__IdTra__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Teacher__IdUsers__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__User_User__IdUse__2BFE89A6" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__User_User__IdUse__2CF2ADDF" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__UserRole___IdRol__245D67DE" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__Users__IdUserRol__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.FK__UserRole___IdUse__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="ManagermentEnglishModel.Teacher_SubjectClass" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
