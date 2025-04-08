@@ -1,3 +1,4 @@
+##          MÔ TẢ CÁC CHỨC NĂNG CHỨC
 <details>
   <summary>Mục đích xây dựng ứng dụng</summary>
 
@@ -29,7 +30,7 @@
 
   </details>
 
-## 3. Yêu cầu chức năng chi tiết
+## Yêu cầu chức năng chi tiết
 
 <details>
   <summary>Quản lý lớp môn học</summary>
