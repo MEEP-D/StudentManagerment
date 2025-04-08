@@ -11,7 +11,7 @@
 <details>
 
 - Nhu cầu của quản trị viên
-  - Quản lý đào tạo bao gồm: lớp môn học, khóa - hệ đào tạo, môn học.
+  - Quản lý đào tạo bao gồm: lớp kỹ năng, khóa - hệ đào tạo, môn học.
   - Quản lý danh sách học viên, giảng viên, quản trị viên.
   - Tạo đợt đăng ký học.
   - Thêm các trường thông tin mới cho học viên, giảng viên.
@@ -35,11 +35,11 @@
 <details>
   <summary>Quản lý lớp học</summary>
 
-- Hiển thị thông tin lớp môn học: môn học, mã môn, sĩ số, giảng viên, thời khóa biểu, …
-- Tìm kiếm các lớp môn học theo mã lớp, giảng viên dạy.
+- Hiển thị thông tin lớp môn học: kỹ năng, mã kỹ năng, sĩ số, giảng viên, thời khóa biểu, …
+- Tìm kiếm các lớp kỹ năng theo mã lớp, giảng viên dạy.
 - Thêm, sửa, xóa các lớp môn học.
-- Hiển thị các lớp môn học theo quyền, theo học kỳ.
-- Đi đến trang thông tin chi tiết của lớp môn học.
+- Hiển thị các lớp kỹ năng theo quyền, theo học kỳ.
+- Đi đến trang thông tin chi tiết của lớp kỹ năng.
 
 </details>
 
@@ -69,11 +69,11 @@
 </details>
 
 <details>
-  <summary>Quản lý môn học</summary>
+  <summary>Quản lý lớp kỹ năng</summary>
 
-- Hiển thị danh sách và thông tin các môn học : tên môn, mã môn, số buổi, mô tả, …
-- Tìm kiếm môn học theo mã môn, tên môn.
-- Thêm, sửa, xóa môn học.
+- Hiển thị danh sách và thông tin các lớp kỹ năng : tên kỹ ănng, mã kỹ năng, số buổi, mô tả, …
+- Tìm kiếm môn học theo mã kỹ năng, tên kỹ năng.
+- Thêm, sửa, xóa điểm kỹ năng.
 - Thêm môn học từ excel.
 
 </details>
@@ -84,13 +84,12 @@
 - Quản trị viên
   - Thêm học kỳ và đóng mở học kỳ.
   - Thêm lớp môn học thủ công hoặc thêm từ file excel.
-  - Xem chi tiết, sửa, xóa lớp môn học.
-  - Tìm kiếm lớp môn học theo tên môn học, mã lớp học.
+  - Xem chi tiết, sửa, xóa.
 - học viên
-  - Đăng ký, hủy đăng ký lớp môn học.
+  - Đăng ký, hủy đăng ký lớp .
   - Trực quan hóa các lớp môn học bằng thời khóa biểu.
   - Đánh dấu những lớp bị trùng giờ học.
-  - Tìm kiếm lớp môn học chưa đăng ký theo tên môn học, mã lớp học.
+  - Tìm kiếm lớp môn học chưa đăng ký theo tên, mã lớp học.
 
 </details>
 
