@@ -3,11 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:StudentManagerment"
+        xmlns:utils="clr-namespace:StudentManagerment.Utils"
         mc:Ignorable="d"
-        Icon="Iconka.ico"
-        
-        Title="LangTrack - Trung tâm đào tạo anh ngữ" Height="450" Width="800">
+        Icon="Iconka.ico"        
+        Title="LangTrack - Trung tâm đào tạo anh ngữ" Height="450" Width="800"
+
+        >
     <Grid>
         
     </Grid>

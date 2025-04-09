@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:StudentManagerment"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="./XAMLResources/IconResource.xaml" />
+                <ResourceDictionary Source="./XAMLResources/ColorResource.xaml" />
+                <ResourceDictionary Source="./XAMLResources/MaterialDesignResource.xaml" />                                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
