@@ -12,8 +12,6 @@
     xmlns:utils="clr-namespace:StudentManagerment.Utils"
     Name="LoginFormUC"
     d:DataContext="{StaticResource LoginVM}"
-    d:DesignHeight="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={utils:RatioConverter}, ConverterParameter='0.64'}"
-    d:DesignWidth="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}, Converter={utils:RatioConverter}, ConverterParameter='0.28'}"
     Background="Transparent"
     FontSize="16"
     mc:Ignorable="d">
@@ -28,7 +26,7 @@
                 ShadowDepth="0"
                 Color="Gray" />
         </Border.Effect>
-        <Grid>
+        <Grid Height="485" Width="336">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="auto" />
@@ -82,7 +80,6 @@
                 Grid.Row="2"
                 Margin="28,16"
                 VerticalContentAlignment="Center"
-                local:PasswordBoxHelper.Password="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
                 materialDesign:HintAssist.Hint="Mật khẩu"
                 materialDesign:HintAssist.HintOpacity="0.5"
                 materialDesign:TextFieldAssist.HasClearButton="True"
@@ -104,7 +101,7 @@
                 </PasswordBox.Style>
             </PasswordBox>
 
-            <DockPanel Grid.Row="3" Margin="28,8">
+            <DockPanel Grid.Row="3" Margin="28,8,-54,8">
                 <CheckBox
                     VerticalContentAlignment="Center"
                     Content="Ghi nhớ"
@@ -113,11 +110,9 @@
                     FontWeight="SemiBold"
                     IsChecked="{Binding IsToRemember, Mode=OneWayToSource}" />
                 <TextBlock
-                    HorizontalAlignment="Right"
-                    VerticalAlignment="Center"
                     DockPanel.Dock="Right"
                     FontWeight="SemiBold"
-                    Text="Quên mật khẩu?">
+                    Text="Quên mật khẩu?" Width="119">
                     <TextBlock.Style>
                         <Style TargetType="TextBlock">
                             <Setter Property="Foreground" Value="{StaticResource ErrorMain}" />
@@ -143,6 +138,7 @@
                 materialDesign:ButtonAssist.CornerRadius="20"
                 Content="Đăng nhập"
                 FontSize="16"
+
                 Style="{StaticResource PrimaryButton}">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="Click">

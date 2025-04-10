@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StudentManagerment.Components.Login
+namespace StudentManagerment.Component.Login
 {
 	/// <summary>
 	/// Interaction logic for LoginForm.xaml

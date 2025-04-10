@@ -10,3 +10,5 @@ C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\Stud
 C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\StudentManagerment_MarkupCompile.cache
 C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\StudentManagerment_MarkupCompile.lref
+C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\XAMLResources\PasswordBox.baml
+C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\Component\Login\ForgotPassword.g.cs
