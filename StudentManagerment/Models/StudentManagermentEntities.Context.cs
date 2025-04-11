@@ -11,7 +11,7 @@ namespace StudentManagerment.Models
 {
     using System;
     using System.Data.Entity;
-    using System.Data.Entity.Infrastructure;
+	using System.Data.Entity.Infrastructure;
     
     public partial class ManagermentEnglishEntities1 : DbContext
     {
@@ -50,5 +50,17 @@ namespace StudentManagerment.Models
         public virtual DbSet<UserRole_UserInfo> UserRole_UserInfo { get; set; }
         public virtual DbSet<UserRole_UserInfoItem> UserRole_UserInfoItem { get; set; }
         public virtual DbSet<Users> Users { get; set; }
-    }
+		//public virtual int USP_InsertUserWithRole(string role, string faculty)
+		//{
+		//	var roleParameter = role != null ?
+		//		new ObjectParameter("Role", role) :
+		//		new ObjectParameter("Role", typeof(string));
+
+		//	var facultyParameter = faculty != null ?
+		//		new ObjectParameter("Faculty", faculty) :
+		//		new ObjectParameter("Faculty", typeof(string));
+
+		//	return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("USP_InsertUserWithRole", roleParameter, facultyParameter);
+		//}
+	}
 }

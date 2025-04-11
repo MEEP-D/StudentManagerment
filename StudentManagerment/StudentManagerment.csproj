@@ -44,11 +44,32 @@
     <StartupObject>StudentManagerment.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.104.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.104.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.Parser.1.2.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.3.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.3.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.3.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.3.0\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.7.0\lib\net462\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.7.0\lib\net462\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
     </Reference>
     <Reference Include="MaterialDesignColors, Version=5.2.1.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.5.2.1\lib\net462\MaterialDesignColors.dll</HintPath>
@@ -56,12 +77,38 @@
     <Reference Include="MaterialDesignThemes.Wpf, Version=5.2.1.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.5.2.1\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.135\lib\net462\Microsoft.Xaml.Behaviors.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RBush.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
@@ -84,12 +131,6 @@
     </ApplicationDefinition>
     <Compile Include="Commands\BaseCommand.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
-    <Compile Include="Component\Login\ForgotPassword.xaml.cs">
-      <DependentUpon>ForgotPassword.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Component\Login\LoginForm.xaml.cs">
-      <DependentUpon>LoginForm.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Models\AbsentCalendar.cs">
       <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
     </Compile>
@@ -109,21 +150,40 @@
       <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DataProvider.cs" />
+    <Compile Include="Objects\Account.cs" />
+    <Compile Include="Objects\BaseObjectWithBaseViewModel.cs" />
+    <Compile Include="Objects\ComponentScoreInSetting.cs" />
+    <Compile Include="Objects\CourseItem.cs" />
+    <Compile Include="Objects\DetailScoreItem.cs" />
+    <Compile Include="Objects\EmptyCard.cs" />
+    <Compile Include="Objects\FacultyCard.cs" />
+    <Compile Include="Objects\FileInfo.cs" />
+    <Compile Include="Objects\IBaseCard.cs" />
+    <Compile Include="Objects\InfoItem.cs" />
+    <Compile Include="Objects\NavigationItem.cs" />
+    <Compile Include="Objects\PieChartElement.cs" />
+    <Compile Include="Objects\ScheduleItem.cs" />
+    <Compile Include="Objects\ScoreDataGrid.cs" />
+    <Compile Include="Objects\SemesterDataGrid.cs" />
+    <Compile Include="Objects\StudentDetailScore.cs" />
+    <Compile Include="Objects\StudentGrid.cs" />
+    <Compile Include="Objects\SubjectCard.cs" />
+    <Compile Include="Objects\SubjectClassCard.cs" />
+    <Compile Include="Objects\TrainingFormCard.cs" />
+    <Compile Include="Objects\TrainingScoreDataGrid.cs" />
+    <Compile Include="Objects\UserCard.cs" />
+    <Compile Include="Service\AbsentCalendarServices.cs" />
     <Compile Include="Service\LoginServices.cs" />
+    <Compile Include="Service\SubjectServices.cs" />
     <Compile Include="Service\UserServices.cs" />
     <Compile Include="Utils\RatioConverter.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\ErrorBaseViewModel.cs" />
+    <Compile Include="ViewModels\LayoutViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Page Include="Component\Login\ForgotPassword.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Component\Login\LoginForm.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -153,6 +213,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="XAMLResources\PasswordBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="XAMLResources\ScrollBarResource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,10 +259,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\StudentManagermentEntities.Designer.cs">
+    <Compile Include="Models\StudentManagerment.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>StudentManagermentEntities.edmx</DependentUpon>
+      <DependentUpon>StudentManagerment.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Subject.cs">
       <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
@@ -247,12 +311,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Models\StudentManagermentEntities.edmx">
+    <EntityDeploy Include="Models\StudentManagerment.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>StudentManagermentEntities.Designer.cs</LastGenOutput>
+      <LastGenOutput>StudentManagerment.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\StudentManagermentEntities.edmx.diagram">
-      <DependentUpon>StudentManagermentEntities.edmx</DependentUpon>
+    <None Include="Models\StudentManagerment.edmx.diagram">
+      <DependentUpon>StudentManagerment.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -267,22 +331,19 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Component\DashBoard\" />
-    <Folder Include="Component\LeftSlideBar\" />
-    <Folder Include="Component\UserInfo\" />
-    <Folder Include="Objects\" />
+    <Folder Include="Components\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\login.png" />
     <Resource Include="Iconka.ico" />
     <Content Include="Models\StudentManagermentEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StudentManagermentEntities.edmx</DependentUpon>
+      <DependentUpon>StudentManagerment.edmx</DependentUpon>
       <LastGenOutput>StudentManagermentEntities.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\StudentManagermentEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StudentManagermentEntities.edmx</DependentUpon>
+      <DependentUpon>StudentManagerment.edmx</DependentUpon>
       <LastGenOutput>StudentManagermentEntities.cs</LastGenOutput>
     </Content>
     <Resource Include="Resources\Images\Iconka.png" />

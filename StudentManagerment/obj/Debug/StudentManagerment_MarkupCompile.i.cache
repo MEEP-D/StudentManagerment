@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\App.xaml
-8-2128983078
+7-2101068358
 2-432881839
-44-1097805847
-21-1886760325
-Component\Login\ForgotPassword.xaml;Component\Login\LoginForm.xaml;MainWindow.xaml;Views\Login.xaml;XAMLResources\ColorResource.xaml;XAMLResources\IconResource.xaml;XAMLResources\MaterialDesignResource.xaml;XAMLResources\PasswordBox.xaml;
+69-1866317386
+1421322271458
+MainWindow.xaml;Views\Login.xaml;XAMLResources\ColorResource.xaml;XAMLResources\IconResource.xaml;XAMLResources\MaterialDesignResource.xaml;XAMLResources\PasswordBox.xaml;XAMLResources\ScrollBarResource.xaml;
 
-True
+False
 
