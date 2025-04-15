@@ -68,3 +68,7 @@ C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\Stud
 C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\StudentM.7A7511C8.Up2Date
 C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\StudentManagerment.exe
 C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\StudentManagerment.pdb
+C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\Components\Login\LoginForm.g.cs
+C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\Components\TitleBar.g.cs
+C:\Users\Admin\source\repos\StudentManagerment\StudentManagerment\obj\Debug\Views\MyMessageBoxView.g.cs

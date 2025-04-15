@@ -26,5 +26,60 @@ namespace StudentManagerment.Properties
 				return defaultInstance;
 			}
 		}
+		[global::System.Configuration.UserScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.DefaultSettingValueAttribute("ducduong.tektra@gmail.com")]
+		public string Email
+		{
+			get
+			{
+				return ((string)(this["Email"]));
+			}
+			set
+			{
+				this["Email"] = value;
+			}
+		}
+
+		[global::System.Configuration.UserScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.DefaultSettingValueAttribute("29012020Duong")]
+		public string Password
+		{
+			get
+			{
+				return ((string)(this["Password"]));
+			}
+			set
+			{
+				this["Password"] = value;
+			}
+		}
+
+		[global::System.Configuration.ApplicationScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+		[global::System.Configuration.DefaultSettingValueAttribute("Data Source=DUONG-MEEP\\\\MSSQLSERVER01;Initial Catalog=StudentManagement;Integrate" +
+			"d Security=True")]
+		public string StudentManagementConnectionString
+		{
+			get
+			{
+				return ((string)(this["StudentManagementConnectionString"]));
+			}
+		}
+
+		[global::System.Configuration.ApplicationScopedSettingAttribute()]
+		[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+		[global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+		[global::System.Configuration.DefaultSettingValueAttribute("Data Source=DUONG-MEEP\\MSSQLSERVER01;Initial Catalog=StudentManagement;Integrated" +
+			" Security=True;TrustServerCertificate=True")]
+		public string StudentManagementConnectionString1
+		{
+			get
+			{
+				return ((string)(this["StudentManagementConnectionString1"]));
+			}
+		}
 	}
 }

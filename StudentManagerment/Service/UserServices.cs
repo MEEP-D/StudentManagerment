@@ -1,98 +1,100 @@
-﻿using StudentManagerment.Models;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using StudentManagerment.Models;
+using StudentManagerment.Utils;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Data.Entity.Migrations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace StudentManagerment.Services
+namespace StudentManagerment.Service
 {
 	public class UserServices
 	{
-		// Biến lưu trữ duy nhất một instance của UserServices
-		private static UserServices _instance;
+		private static UserServices s_instance;
 
-		// Thuộc tính để truy cập instance từ bên ngoài
-		public static UserServices Instance
+		public static UserServices Instance => s_instance ?? (s_instance = new UserServices());
+
+		public UserServices() { }
+
+		public Users GetUserInfo()
 		{
-			get
-			{
-				// Nếu chưa có instance thì tạo mới
-				if (_instance == null)
-				{
-					_instance = new UserServices();
-				}
-				return _instance;
-			}
+			Users a = DataProvider.Instance.Database.Users.FirstOrDefault();
+			return a;
 		}
-
-		// Constructor riêng tư để ngăn việc tạo instance từ bên ngoài
-		private UserServices() { }
-
-		// Lấy thông tin người dùng đầu tiên trong database
-		public Users GetFirstUser()
-		{
-			return DataProvider.Instance.Database.Users.FirstOrDefault();
-		}
-
-		// Tìm người dùng bằng ID
 		public Users GetUserById(Guid id)
 		{
-			return DataProvider.Instance.Database.Users.FirstOrDefault(u => u.Id == id);
+			Users a = DataProvider.Instance.Database.Users.FirstOrDefault(user => user.Id == id);
+			return a;
 		}
 
-		// Tìm người dùng bằng tên đăng nhập
 		public Users FindUserByUsername(string username)
 		{
-			return DataProvider.Instance.Database.Users.FirstOrDefault(u => u.Username == username);
-		}
+			Users user = DataProvider.Instance.Database.Users.FirstOrDefault(account => account.Username == username);
 
-		//  Lấy tên hiển thị của người dùng theo ID
-		public string GetDisplayName(Guid userId)
-		{
-			Users user = GetUserById(userId);
-			return user?.DisplayName; // Trả về null nếu không tìm thấy user
+			return user;
 		}
 		public string GetDisplayNameById(Guid id)
 		{
 			var user = GetUserById(id);
 			return user.DisplayName;
 		}
-
-		// Lấy ảnh đại diện của người dùng theo ID
-		public string GetUserAvatar(Guid userId)
+		public string GetAvatarById(Guid id)
 		{
-			Users user = GetUserById(userId);
-			return user?.DatabaseImageTable?.Image;
+			var user = GetUserById(id);
+			return user.DatabaseImageTable?.Image;
+		}
+		//public string GetFacultyById(Guid id)
+		//{
+		//	var user = GetUserById(id);
+		//	return user.Faculty.DisplayName;
+		//}
+		public List<Users> GetUserByGmail(string email)
+		{
+			return DataProvider.Instance.Database.Users.Where(user => user.Email.Equals(email)).ToList();
+		}
+		public Users GetUserByOTP(OTP otp)
+		{
+			return DataProvider.Instance.Database.Users.FirstOrDefault(tmpUser => tmpUser.IdOTP == otp.Id);
 		}
 
-		// Tìm người dùng bằng email
-		public List<Users> FindUsersByEmail(string email)
+		public bool CheckAdminByIdUser(Guid id)
 		{
-			return DataProvider.Instance.Database.Users
-				.Where(u => u.Email == email)
-				.ToList();
+			return DataProvider.Instance.Database.Users.FirstOrDefault(user => user.Id == id).UserRole.Role.Contains("Admin");
 		}
 
-		//  Kiểm tra xem email đã được sử dụng chưa
-		public bool IsEmailUsed(string email)
+		public bool IsUsedEmail(string email)
 		{
-			return DataProvider.Instance.Database.Users.Any(u => u.Email == email);
+			foreach (var user in DataProvider.Instance.Database.Users.ToList())
+			{
+				if (user.Email.Equals(email))
+					return true;
+			}
+			return false;
 		}
 
-		// Kiểm tra xem người dùng có phải admin không
-		public bool IsAdmin(Guid userId)
+		public Users FindUserbyUserId(Guid id)
 		{
-			Users user = GetUserById(userId);
-			return user?.UserRole?.Role?.Contains("Admin") ?? false;
+			Users a = DataProvider.Instance.Database.Users.Where(userItem => userItem.Id == id).FirstOrDefault();
+			return a;
 		}
 
-		//  Lưu thông tin người dùng vào database
-		public bool SaveUser(Users user)
+		public bool SaveUserToDatabase(Users user)
 		{
 			try
 			{
-				DataProvider.Instance.Database.Users.AddOrUpdate(user);
+				Users savedUser = FindUserbyUserId(user.Id);
+
+				if (savedUser == null)
+				{
+					DataProvider.Instance.Database.Users.AddOrUpdate(user);
+				}
+				else
+				{
+					//savedFaculty = (faculty.ShallowCopy() as Faculty);
+					//Reflection.CopyProperties(user, savedUser);
+				}
 				DataProvider.Instance.Database.SaveChanges();
 				return true;
 			}
@@ -101,25 +103,32 @@ namespace StudentManagerment.Services
 				return false;
 			}
 		}
-
-		// Thay đổi mật khẩu cho người dùng hiện tại
-		public bool ChangePassword(string newPassword, Users user)
+		//public async Task SaveImageToUser(string image)
+		//{
+		//	var imgId = await DatabaseImageTableServices.Instance.SaveImageToDatabaseAsync(image);
+		//	LoginServices.CurrentUser.IdAvatar = imgId;
+		//	DataProvider.Instance.Database.SaveChanges();
+		//}
+		public bool ChangePassWord(string passWord, string gmail)
 		{
-			if (user == null) return false;
-
-			user.Password = (newPassword);
+			var user = GetUserByGmail(gmail);
+			if (user.Count == 0)
+				return false;
+			user.FirstOrDefault().Password = SHA256Cryptography.Instance.EncryptString(passWord);
 			DataProvider.Instance.Database.SaveChanges();
 			return true;
 		}
-
-		//  Kiểm tra đăng nhập
-		public bool ValidateLogin(string username, string password)
+		public void ChangePassWordOfCurrentUser(string passWord, Users user)
 		{
-			// Mã hóa mật khẩu nhập vào để so sánh
-			string encryptedPassword = (password);
-
-			return DataProvider.Instance.Database.Users
-				.Any(u => u.Username == username && u.Password == encryptedPassword);
+			user.Password = SHA256Cryptography.Instance.EncryptString(passWord);
+			DataProvider.Instance.Database.SaveChanges();
+		}
+		public bool CheckLogin(string userName, string passWord)
+		{
+			var user = DataProvider.Instance.Database.Users.Where(tmpUser => tmpUser.Username == userName && tmpUser.Password == passWord).ToList();
+			if (user.Count() > 0)
+				return true;
+			return false;
 		}
 	}
 }

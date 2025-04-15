@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace StudentManagement.Commands
+namespace StudentManagerment.Commands
 {
 	// RelayCommand giúp bạn gán logic cho các nút bấm trong giao diện (WPF)
 	public class RelayCommand<T> : ICommand

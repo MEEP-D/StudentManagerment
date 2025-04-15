@@ -1,12 +1,15 @@
-﻿
-using StudentManagerment.Models;
+﻿using StudentManagerment.Models;
 using System;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using StudentManagerment.Utils;
+using Microsoft.VisualBasic.ApplicationServices;
 
-namespace StudentManagement.Services
+
+
+namespace StudentManagerment.Service
 {
 	public class LoginServices
 	{
@@ -31,10 +34,12 @@ namespace StudentManagement.Services
 
 		private static LoginServices instance;
 		public static LoginServices Instance => instance ?? (instance = new LoginServices());
+		
+		private static Users s_currentUser;
 
-		public static Users CurrentUser { get; set; }
+		public static Users CurrentUser { get => s_currentUser; set => s_currentUser = value; }
 
-		public static string RememberedAccountFilePath = "D:\\accountMan.txt";
+		public static string RememberedAccountFilePath = "D:\\accountLang.txt";
 
 		public int CountPeriodTodayOfUser;
 
@@ -45,23 +50,23 @@ namespace StudentManagement.Services
 		/// <summary>
 		/// Kiểm tra tài khoản và mật khẩu có đúng không
 		/// </summary>
-		//public bool IsUserAuthentic(string username, string password)
-		//{
-		//	string encryptedPassword = SHA256Cryptography.Instance.EncryptString(password);
+		public bool IsUserAuthentic(string username, string password)
+		{
+			string encryptedPassword = SHA256Cryptography.Instance.EncryptString(password);
 
-		//	return db.Users.Any(user => user.Username == username && user.Password == encryptedPassword);
-		//}
+			return db.Users.Any(user => user.Username == username && user.Password == encryptedPassword);
+		}
 
 		/// <summary>
 		/// Thực hiện đăng nhập và gán người dùng hiện tại
 		/// </summary>
-		//public void Login(string username)
-		//{
-		//	Users user = UserServices.Instance.FindUserByUsername(username);
-		//	CurrentUser = user;
+		public void Login(string username)
+		{
+			Users user = UserServices.Instance.FindUserByUsername(username);
+			CurrentUser = user;
 
-		//	_updateCurrentUser?.Invoke(this, new LoginEvent(user));
-		//}
+			_updateCurrentUser?.Invoke(this, new LoginEvent(user));
+		}
 
 		/// <summary>
 		/// Mã hóa Base64
