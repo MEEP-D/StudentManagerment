@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ManagermentEnglishModelStoreContainer" CdmEntityContainer="ManagermentEnglishEntities1">
+  <EntityContainerMapping StorageEntityContainer="ManagermentEnglishModelStoreContainer" CdmEntityContainer="ManagermentEnglish">
     <EntitySetMapping Name="AbsentCalendar">
       <EntityTypeMapping TypeName="ManagermentEnglishModel.AbsentCalendar">
         <MappingFragment StoreEntitySet="AbsentCalendar">
@@ -124,6 +124,57 @@
           <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
           <ScalarProperty Name="IdSubjectClass" ColumnName="IdSubjectClass" />
           <ScalarProperty Name="IdPoster" ColumnName="IdPoster" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notification">
+      <EntityTypeMapping TypeName="ManagermentEnglishModel.Notification">
+        <MappingFragment StoreEntitySet="Notification">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Topic" ColumnName="Topic" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="IdNotificationType" ColumnName="IdNotificationType" />
+          <ScalarProperty Name="IdPoster" ColumnName="IdPoster" />
+          <ScalarProperty Name="IdSubjectClass" ColumnName="IdSubjectClass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationComment">
+      <EntityTypeMapping TypeName="ManagermentEnglishModel.NotificationComment">
+        <MappingFragment StoreEntitySet="NotificationComment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdUserComment" ColumnName="IdUserComment" />
+          <ScalarProperty Name="IdNotification" ColumnName="IdNotification" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationImages">
+      <EntityTypeMapping TypeName="ManagermentEnglishModel.NotificationImages">
+        <MappingFragment StoreEntitySet="NotificationImages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdNotification" ColumnName="IdNotification" />
+          <ScalarProperty Name="IdDatabaseImageTable" ColumnName="IdDatabaseImageTable" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationInfo">
+      <EntityTypeMapping TypeName="ManagermentEnglishModel.NotificationInfo">
+        <MappingFragment StoreEntitySet="NotificationInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdNotification" ColumnName="IdNotification" />
+          <ScalarProperty Name="IdUserReceiver" ColumnName="IdUserReceiver" />
+          <ScalarProperty Name="IsRead" ColumnName="IsRead" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationType">
+      <EntityTypeMapping TypeName="ManagermentEnglishModel.NotificationType">
+        <MappingFragment StoreEntitySet="NotificationType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

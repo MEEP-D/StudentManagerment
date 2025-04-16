@@ -43,7 +43,7 @@ namespace StudentManagerment.Service
 
 		public int CountPeriodTodayOfUser;
 
-		private ManagermentEnglishEntities1 db = DataProvider.Instance.Database;
+		private ManagermentEnglish db = DataProvider.Instance.Database;
 
 		private LoginServices() { }
 

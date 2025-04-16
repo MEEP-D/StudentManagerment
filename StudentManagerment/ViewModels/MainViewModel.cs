@@ -13,7 +13,7 @@ using System.Windows.Input;
 using static StudentManagerment.Service.LoginServices;
 using NavigationItem = StudentManagerment.Objects.NavigationItem;
 
-namespace StudentManagement.ViewModels
+namespace StudentManagerment.ViewModels
 {
 	public class MainViewModel : BaseViewModel
 	{

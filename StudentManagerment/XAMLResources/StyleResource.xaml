@@ -315,7 +315,6 @@
         <Setter Property="materialDesign:CalendarAssist.HeaderBackground" Value="{DynamicResource Background}" />
         <Setter Property="materialDesign:CalendarAssist.HeaderForeground" Value="DimGray" />
         <Setter Property="materialDesign:CalendarAssist.Orientation" Value="Vertical" />
-        <Setter Property="materialDesign:ShadowAssist.ShadowDepth" Value="Depth0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Calendar}">
@@ -329,7 +328,6 @@
                             materialDesign:CalendarAssist.HeaderForeground="{TemplateBinding materialDesign:CalendarAssist.HeaderForeground}"
                             materialDesign:CalendarAssist.IsHeaderVisible="{TemplateBinding materialDesign:CalendarAssist.IsHeaderVisible}"
                             materialDesign:CalendarAssist.Orientation="{TemplateBinding materialDesign:CalendarAssist.Orientation}"
-                            materialDesign:ShadowAssist.ShadowDepth="{TemplateBinding materialDesign:ShadowAssist.ShadowDepth}"
                             Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
@@ -600,7 +598,6 @@
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Padding" Value="16,4,16,4" />
-        <Setter Property="materialDesign:ShadowAssist.ShadowDepth" Value="Depth1" />
         <Setter Property="Height" Value="32" />
         <Setter Property="Template">
             <Setter.Value>
@@ -612,8 +609,7 @@
                                 Background="{TemplateBinding Background}"
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 BorderThickness="{TemplateBinding BorderThickness}"
-                                CornerRadius="{Binding Path=(materialDesign:ButtonAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}"
-                                Effect="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(materialDesign:ShadowAssist.ShadowDepth), Converter={x:Static materialDesign:ShadowConverter.Instance}}" />
+                                CornerRadius="{Binding Path=(materialDesign:ButtonAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}"/>
                         </AdornerDecorator>
                         <materialDesign:Ripple
                             Padding="{TemplateBinding Padding}"
@@ -714,7 +710,6 @@
 
     <Style x:Key="CardContainer" TargetType="materialDesign:Card">
         <Setter Property="Padding" Value="4" />
-        <Setter Property="materialDesign:ShadowAssist.ShadowDepth" Value="Depth1" />
         <Setter Property="UniformCornerRadius" Value="8" />
     </Style>
 

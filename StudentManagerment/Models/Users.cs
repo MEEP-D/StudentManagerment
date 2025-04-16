@@ -20,6 +20,10 @@ namespace StudentManagerment.Models
             this.Admin = new HashSet<Admin>();
             this.Document = new HashSet<Document>();
             this.Folder = new HashSet<Folder>();
+            this.Notification = new HashSet<Notification>();
+            this.Notification1 = new HashSet<Notification>();
+            this.NotificationComment = new HashSet<NotificationComment>();
+            this.NotificationInfo = new HashSet<NotificationInfo>();
             this.Student = new HashSet<Student>();
             this.Teacher = new HashSet<Teacher>();
             this.User_UserRole_UserInfo = new HashSet<User_UserRole_UserInfo>();
@@ -42,6 +46,14 @@ namespace StudentManagerment.Models
         public virtual ICollection<Document> Document { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Folder> Folder { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Notification> Notification { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Notification> Notification1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NotificationComment> NotificationComment { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NotificationInfo> NotificationInfo { get; set; }
         public virtual OTP OTP { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Student { get; set; }

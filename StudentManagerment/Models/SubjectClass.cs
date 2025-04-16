@@ -23,6 +23,8 @@ namespace StudentManagerment.Models
             this.Document = new HashSet<Document>();
             this.Examination = new HashSet<Examination>();
             this.Folder = new HashSet<Folder>();
+            this.Notification = new HashSet<Notification>();
+            this.Notification1 = new HashSet<Notification>();
             this.Teacher = new HashSet<Teacher>();
         }
     
@@ -53,6 +55,10 @@ namespace StudentManagerment.Models
         public virtual ICollection<Examination> Examination { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Folder> Folder { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Notification> Notification { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Notification> Notification1 { get; set; }
         public virtual Semester Semester { get; set; }
         public virtual Subject Subject { get; set; }
         public virtual TrainingForm TrainingForm { get; set; }

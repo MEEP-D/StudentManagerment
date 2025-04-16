@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/studentmanagermententities.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/studentmanagermententities.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/managermentenglish.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("models/managermentenglish.tt")]
 
 

@@ -77,6 +77,9 @@
     <Reference Include="MaterialDesignColors, Version=5.2.1.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.5.2.1\lib\net462\MaterialDesignColors.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialDesignThemes.CustomResources, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.CustomResources.1.0.0\lib\net472\MaterialDesignThemes.CustomResources.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignThemes.Wpf, Version=5.2.1.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignThemes.5.2.1\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
     </Reference>
@@ -150,8 +153,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\AbsentCalendar.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Admin.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Class.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
     <Compile Include="Commands\BaseCommand.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Models\ComponentScore.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
     <Compile Include="Components\Login\ForgotPassword.xaml.cs">
       <DependentUpon>ForgotPassword.xaml</DependentUpon>
     </Compile>
@@ -161,26 +176,62 @@
     <Compile Include="Components\TitleBar.xaml.cs">
       <DependentUpon>TitleBar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\AbsentCalendar.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Admin.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Class.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\ComponentScore.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\CourseRegister.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DatabaseImageTable.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DetailScore.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Document.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Examination.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Faculty.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Faculty_TrainingForm.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Folder.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManagermentEnglish.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagermentEnglish.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManagermentEnglish.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ManagermentEnglish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManagermentEnglish.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\DataProvider.cs" />
     <Compile Include="MyMessageBox.cs" />
+    <Compile Include="Models\Notification.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NotificationComment.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NotificationImages.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NotificationInfo.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NotificationType.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
     <Compile Include="Objects\Account.cs" />
     <Compile Include="Objects\BaseObjectWithBaseViewModel.cs" />
     <Compile Include="Objects\ComponentScoreInSetting.cs" />
@@ -188,10 +239,15 @@
     <Compile Include="Objects\DetailScoreItem.cs" />
     <Compile Include="Objects\EmptyCard.cs" />
     <Compile Include="Objects\FacultyCard.cs" />
+    <Compile Include="Service\AdminServices.cs" />
+    <Compile Include="Service\CourseRegisterServices.cs" />
+    <Compile Include="Service\Faculty_TrainingFormServices.cs" />
+    <Compile Include="Service\FacutlyServices.cs" />
     <Compile Include="Objects\FileInfo.cs" />
     <Compile Include="Objects\IBaseCard.cs" />
     <Compile Include="Objects\InfoItem.cs" />
     <Compile Include="Objects\NavigationItem.cs" />
+    <Compile Include="Objects\NotificationCard.cs" />
     <Compile Include="Objects\PieChartElement.cs" />
     <Compile Include="Objects\ScheduleItem.cs" />
     <Compile Include="Objects\ScoreDataGrid.cs" />
@@ -203,16 +259,84 @@
     <Compile Include="Objects\TrainingFormCard.cs" />
     <Compile Include="Objects\TrainingScoreDataGrid.cs" />
     <Compile Include="Objects\UserCard.cs" />
+    <Compile Include="Models\OTP.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Semester.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
     <Compile Include="Service\AbsentCalendarServices.cs" />
+    <Compile Include="Service\DatabaseImageTableServices.cs" />
+    <Compile Include="Service\FileServices.cs" />
     <Compile Include="Service\LoginServices.cs" />
+    <Compile Include="Service\NewsfeedServices.cs" />
+    <Compile Include="Service\NotificationServices.cs" />
+    <Compile Include="Service\NotificationTypeServices.cs" />
     <Compile Include="Service\OTPServices.cs" />
+    <Compile Include="Service\SemesterServices.cs" />
+    <Compile Include="Service\SorceServices.cs" />
+    <Compile Include="Service\StudentServices.cs" />
+    <Compile Include="Service\SubjectClassServices.cs" />
     <Compile Include="Service\SubjectServices.cs" />
     <Compile Include="Service\TeacherSevices.cs" />
     <Compile Include="Service\TrainningFormServices.cs" />
     <Compile Include="Service\UserServices.cs" />
     <Compile Include="Service\UserUserRoleUserInfoServices.cs" />
+    <Compile Include="Models\Student.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Subject.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SubjectClass.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Teacher.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TrainingForm.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TrainingScore.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserRole.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserRole_UserInfo.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserRole_UserInfoItem.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Users.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_UserRole_UserInfo.cs">
+      <DependentUpon>ManagermentEnglish.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\BindingProxy.cs" />
+    <Compile Include="Utils\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Utils\CheckAdminConverter.cs" />
+    <Compile Include="Utils\ConverterDateTimeFromString.cs" />
+    <Compile Include="Utils\ConverterDisplayNameFromIdUser.cs" />
+    <Compile Include="Utils\ConverterImageFromIdUser.cs" />
+    <Compile Include="Utils\DateTimeConverter.cs" />
+    <Compile Include="Utils\DoubleStringConverter.cs" />
+    <Compile Include="Utils\FileExtensionToImageConverter.cs" />
+    <Compile Include="Utils\FileSizeConverter.cs" />
+    <Compile Include="Utils\IntToDateOfWeekConverter.cs" />
+    <Compile Include="Utils\IsNumericConverter.cs" />
+    <Compile Include="Utils\LayoutConverter.cs" />
+    <Compile Include="Utils\MultiBindingValueCompareConverter.cs" />
+    <Compile Include="Utils\MultiCommandParameterConverter.cs" />
+    <Compile Include="Utils\PropertyByRoleConverter.cs" />
     <Compile Include="Utils\RatioConverter.cs" />
+    <Compile Include="Utils\Reflection.cs" />
     <Compile Include="Utils\SHA256Cryptography.cs" />
+    <Compile Include="Utils\SwitchBoolConverter.cs" />
+    <Compile Include="Utils\VietnameseStringNormalizer.cs" />
+    <Compile Include="Utils\VisibilityByUserIdConverter.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\EmptyStateRightSideBarViewModel.cs" />
     <Compile Include="ViewModels\ErrorBaseViewModel.cs" />
@@ -290,78 +414,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\DetailScore.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Document.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Examination.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Faculty.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Faculty_TrainingForm.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Folder.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OTP.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Semester.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Student.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StudentManagermentEntities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentManagermentEntities.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StudentManagermentEntities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\StudentManagerment.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>StudentManagerment.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Subject.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\SubjectClass.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Teacher.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TrainingForm.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\TrainingScore.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UserRole.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UserRole_UserInfo.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UserRole_UserInfoItem.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Users.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\User_UserRole_UserInfo.cs">
-      <DependentUpon>StudentManagermentEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -379,12 +431,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Models\StudentManagerment.edmx">
+    <EntityDeploy Include="Models\ManagermentEnglish.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>StudentManagerment.Designer.cs</LastGenOutput>
+      <LastGenOutput>ManagermentEnglish.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\StudentManagerment.edmx.diagram">
-      <DependentUpon>StudentManagerment.edmx</DependentUpon>
+    <None Include="Models\ManagermentEnglish.edmx.diagram">
+      <DependentUpon>ManagermentEnglish.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -404,17 +456,19 @@
   <ItemGroup>
     <Resource Include="Resources\Images\login.png" />
     <Resource Include="Iconka.ico" />
-    <Content Include="Models\StudentManagermentEntities.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StudentManagerment.edmx</DependentUpon>
-      <LastGenOutput>StudentManagermentEntities.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\StudentManagermentEntities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StudentManagerment.edmx</DependentUpon>
-      <LastGenOutput>StudentManagermentEntities.cs</LastGenOutput>
-    </Content>
     <Resource Include="Resources\Images\Iconka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\ManagermentEnglish.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ManagermentEnglish.edmx</DependentUpon>
+      <LastGenOutput>ManagermentEnglish.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ManagermentEnglish.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ManagermentEnglish.edmx</DependentUpon>
+      <LastGenOutput>ManagermentEnglish.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

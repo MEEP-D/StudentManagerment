@@ -46,14 +46,14 @@ namespace StudentManagerment.Services
 		}
 		public void DeleteOTPOverTime()
 		{
-			if (DataProvider.Instance.Database.OTP.ToList().Count == 0)
+			if (DataProvider.Instance.Database.OTPs.ToList().Count == 0)
 				return;
-			var listOTP = DataProvider.Instance.Database.OTP.Where(otp => DbFunctions.DiffMinutes(otp.Time, DateTime.Now) > 5).ToList();
+			var listOTP = DataProvider.Instance.Database.OTPs.Where(otp => DbFunctions.DiffMinutes(otp.Time, DateTime.Now) > 5).ToList();
 			if (listOTP.Count < 0)
 				return;
 			foreach (var otp in listOTP)
 			{
-				DataProvider.Instance.Database.OTP.Remove(otp);
+				DataProvider.Instance.Database.OTPs.Remove(otp);
 				var user = UserServices.Instance.GetUserByOTP(otp);
 				try
 				{

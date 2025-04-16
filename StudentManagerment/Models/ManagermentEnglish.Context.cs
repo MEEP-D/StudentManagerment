@@ -11,12 +11,12 @@ namespace StudentManagerment.Models
 {
     using System;
     using System.Data.Entity;
-	using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Infrastructure;
     
-    public partial class ManagermentEnglishEntities1 : DbContext
+    public partial class ManagermentEnglish : DbContext
     {
-        public ManagermentEnglishEntities1()
-            : base("name=ManagermentEnglishEntities1")
+        public ManagermentEnglish()
+            : base("name=ManagermentEnglish")
         {
         }
     
@@ -37,6 +37,11 @@ namespace StudentManagerment.Models
         public virtual DbSet<Faculty> Faculty { get; set; }
         public virtual DbSet<Faculty_TrainingForm> Faculty_TrainingForm { get; set; }
         public virtual DbSet<Folder> Folder { get; set; }
+        public virtual DbSet<Notification> Notification { get; set; }
+        public virtual DbSet<NotificationComment> NotificationComment { get; set; }
+        public virtual DbSet<NotificationImages> NotificationImages { get; set; }
+        public virtual DbSet<NotificationInfo> NotificationInfo { get; set; }
+        public virtual DbSet<NotificationType> NotificationType { get; set; }
         public virtual DbSet<OTP> OTP { get; set; }
         public virtual DbSet<Semester> Semester { get; set; }
         public virtual DbSet<Student> Student { get; set; }
@@ -50,17 +55,5 @@ namespace StudentManagerment.Models
         public virtual DbSet<UserRole_UserInfo> UserRole_UserInfo { get; set; }
         public virtual DbSet<UserRole_UserInfoItem> UserRole_UserInfoItem { get; set; }
         public virtual DbSet<Users> Users { get; set; }
-		//public virtual int USP_InsertUserWithRole(string role, string faculty)
-		//{
-		//	var roleParameter = role != null ?
-		//		new ObjectParameter("Role", role) :
-		//		new ObjectParameter("Role", typeof(string));
-
-		//	var facultyParameter = faculty != null ?
-		//		new ObjectParameter("Faculty", faculty) :
-		//		new ObjectParameter("Faculty", typeof(string));
-
-		//	return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("USP_InsertUserWithRole", roleParameter, facultyParameter);
-		//}
-	}
+    }
 }

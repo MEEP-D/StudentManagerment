@@ -18,6 +18,7 @@ namespace StudentManagerment.Models
         public DatabaseImageTable()
         {
             this.Class = new HashSet<Class>();
+            this.NotificationImages = new HashSet<NotificationImages>();
             this.SubjectClass = new HashSet<SubjectClass>();
             this.Users = new HashSet<Users>();
         }
@@ -27,6 +28,8 @@ namespace StudentManagerment.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Class> Class { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NotificationImages> NotificationImages { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SubjectClass> SubjectClass { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
