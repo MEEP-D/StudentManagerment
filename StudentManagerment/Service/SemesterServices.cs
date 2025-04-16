@@ -20,7 +20,7 @@ namespace StudentManagerment.Service
 		//CourseRegistryStatus:
 		//0-Tạm đóng đăng ký
 		//1-Đang mở đăng ký,
-		//2-Kết thúc đợt đăng ký học phần, đưa sinh viên vào lớp học và update TKB SV
+		//2-Kết thúc đợt đăng ký học phần, đưa học viên vào lớp học và update TKB SV
 		public Semester FindSemesterBySemesterId(Guid id)
 		{
 			Semester a = DataProvider.Instance.Database.Semester.Where(semesterItem => semesterItem.Id == id).FirstOrDefault();

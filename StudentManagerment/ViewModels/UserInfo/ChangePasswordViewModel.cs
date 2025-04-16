@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace StudentManagement.ViewModels
+namespace StudentManagerment.ViewModels
 {
 	public class ChangePasswordViewModel : BaseViewModel, INotifyDataErrorInfo
 	{

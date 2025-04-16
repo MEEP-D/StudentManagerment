@@ -7,7 +7,7 @@
     xmlns:local="clr-namespace:StudentManagerment.Views"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:utils="clr-namespace:StudentManagerment.Utils"
+    xmlns:utils="clr-namespace:StudentManagerment.Utils" 
     d:DesignHeight="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight}, Converter={utils:RatioConverter}, ConverterParameter='0.84'}"
     d:DesignWidth="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}, Converter={utils:RatioConverter}, ConverterParameter='0.84'}"
     Background="{DynamicResource Transparent}"
@@ -38,7 +38,7 @@
                     VerticalAlignment="Center"
                     FontSize="32"
                     FontWeight="Bold">
-                    <Run Text="LangTrack - Trung tâm đào tạo anh ngữ" />
+                    <Run Text="Hệ Thống Quản Lý Đào Tạo" />
                 </TextBlock>
                 <Image
                     Grid.Row="1"
@@ -54,7 +54,7 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid.Resources>
-                    <!--<components:LoginForm x:Key="defaultView"/>-->
+                    <components:LoginForm x:Key="defaultView"/>
                 </Grid.Resources>
                 <ContentControl Grid.Row="1" Margin="0 0 48 0" Content="{Binding CurrentView, TargetNullValue={StaticResource defaultView}}">
                 </ContentControl>

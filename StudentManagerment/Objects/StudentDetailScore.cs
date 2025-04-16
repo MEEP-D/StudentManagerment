@@ -11,7 +11,7 @@ namespace StudentManagerment.Objects
 		// ID của bảng điểm chi tiết
 		public Guid Id { get; set; }
 
-		// ID của sinh viên
+		// ID của học viên
 		public Guid? IdStudent { get; set; }
 
 		// ID của điểm thành phần (VD: giữa kỳ, cuối kỳ)

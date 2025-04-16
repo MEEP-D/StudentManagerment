@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
+using StudentManagement.Utils;
 using StudentManagerment.Utils;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentManagement.Services
+namespace StudentManagerment.Service
 {
 	public class ImageUploader
 	{
@@ -18,7 +19,7 @@ namespace StudentManagement.Services
 
 		private HttpClient _client;
 
-		private const string UrlUpload = "https://api.imgbb.com/1/upload";//56bbead55b86d43ad653ff417501d819
+		private const string UrlUpload = "https://api.imgbb.com/1/upload";
 		private const string Token = "56bbead55b86d43ad653ff417501d819";
 
 		public ImageUploader()

@@ -268,6 +268,9 @@
     <Compile Include="Service\AbsentCalendarServices.cs" />
     <Compile Include="Service\DatabaseImageTableServices.cs" />
     <Compile Include="Service\FileServices.cs" />
+    <Compile Include="Service\FileUploader.cs" />
+    <Compile Include="Service\ImageUploader.cs" />
+    <Compile Include="Service\InfoItemServices.cs" />
     <Compile Include="Service\LoginServices.cs" />
     <Compile Include="Service\NewsfeedServices.cs" />
     <Compile Include="Service\NotificationServices.cs" />
@@ -326,6 +329,7 @@
     <Compile Include="Utils\FileExtensionToImageConverter.cs" />
     <Compile Include="Utils\FileSizeConverter.cs" />
     <Compile Include="Utils\IntToDateOfWeekConverter.cs" />
+    <Compile Include="Utils\IsNullConverter.cs" />
     <Compile Include="Utils\IsNumericConverter.cs" />
     <Compile Include="Utils\LayoutConverter.cs" />
     <Compile Include="Utils\MultiBindingValueCompareConverter.cs" />
@@ -338,14 +342,72 @@
     <Compile Include="Utils\VietnameseStringNormalizer.cs" />
     <Compile Include="Utils\VisibilityByUserIdConverter.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\CampusStudentList\AddStudentListViewModel.cs" />
+    <Compile Include="ViewModels\CampusStudentList\CampusStudentListRightSideBarItemEditViewModel.cs" />
+    <Compile Include="ViewModels\CampusStudentList\CampusStudentListRightSideBarItemViewModel.cs" />
+    <Compile Include="ViewModels\CampusStudentList\CampusStudentListRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\CampusStudentList\CampusStudentListViewModel.cs" />
+    <Compile Include="ViewModels\CourseRegistry\AdminCourseRegistryRightSideBarItemEditViewModel.cs" />
+    <Compile Include="ViewModels\CourseRegistry\AdminCourseRegistryRightSideBarItemViewModel.cs" />
+    <Compile Include="ViewModels\CourseRegistry\AdminCourseRegistryRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\CourseRegistry\AdminCourseRegistryViewModel.cs" />
+    <Compile Include="ViewModels\CourseRegistry\CreateNewCourseViewModel.cs" />
+    <Compile Include="ViewModels\CourseRegistry\StudentCourseRegistryRightSideBarItemViewModel.cs" />
+    <Compile Include="ViewModels\CourseRegistry\StudentCourseRegistryRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\CourseRegistry\StudentCourseRegistryViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\AdminHomeRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\Dashboard\AdminHomeViewModel.cs" />
     <Compile Include="ViewModels\EmptyStateRightSideBarViewModel.cs" />
     <Compile Include="ViewModels\ErrorBaseViewModel.cs" />
+    <Compile Include="ViewModels\FacultyTrainingForm\AdminFacultyRightSideBarItemEditViewModel.cs" />
+    <Compile Include="ViewModels\FacultyTrainingForm\AdminFacultyRightSideBarItemViewModel.cs" />
+    <Compile Include="ViewModels\FacultyTrainingForm\AdminFacultyTrainingFormRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\FacultyTrainingForm\AdminFacultyTrainingFormViewModel.cs" />
+    <Compile Include="ViewModels\FacultyTrainingForm\AdminTrainingFormRightSideBarItemEditViewModel.cs" />
+    <Compile Include="ViewModels\FacultyTrainingForm\AdminTrainingFormRightSideBarItemViewModel.cs" />
     <Compile Include="ViewModels\LayoutViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\Notification\AdminNotificationRightSideBarEditViewModel.cs" />
+    <Compile Include="ViewModels\Notification\AdminNotificationRightSideBarItemViewModel.cs" />
+    <Compile Include="ViewModels\Notification\AdminNotificationRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\Notification\AdminNotificationViewModel.cs" />
+    <Compile Include="ViewModels\Notification\CreateNewNotificationViewModel.cs" />
+    <Compile Include="ViewModels\Notification\ShowDetailNotificationViewModel.cs" />
     <Compile Include="ViewModels\OverviewScoreboardViewModel.cs" />
+    <Compile Include="ViewModels\ScheduleTable\StudentScheduleTableViewModel.cs" />
+    <Compile Include="ViewModels\ScoreBoard\ScoreBoardRightSideBarItemViewModel.cs" />
+    <Compile Include="ViewModels\ScoreBoard\ScoreBoardRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\ScoreBoard\ScoreBoardViewModel.cs" />
+    <Compile Include="ViewModels\StudentList\AdminStudentListViewModel.cs" />
+    <Compile Include="ViewModels\StudentList\StudentListRightSideBarItemEditViewModel.cs" />
+    <Compile Include="ViewModels\StudentList\StudentListRightSideBarItemViewModel.cs" />
+    <Compile Include="ViewModels\StudentList\StudentListRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClassDetail\CreatePostNewFeedViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClassDetail\FileManagerClassDetailViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClassDetail\FileManagerRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClassDetail\NewFeedSubjectClassDetailViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClassDetail\NewsfeedRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClassDetail\PostNewsfeedViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClassDetail\SettingSubjectClassDetailViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClassDetail\SettingSubjectClassRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClassDetail\SubjectClassDetailViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClass\AdminSubjectClassRightSideBarItemEditViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClass\AdminSubjectClassRightSideBarItemViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClass\AdminSubjectClassRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\SubjectClass\AdminSubjectClassViewModel.cs" />
+    <Compile Include="ViewModels\Subject\AdminSubjectRightSideBarItemEditViewModel.cs" />
+    <Compile Include="ViewModels\Subject\AdminSubjectRightSideBarItemViewModel.cs" />
+    <Compile Include="ViewModels\Subject\AdminSubjectRightSideBarViewModel.cs" />
+    <Compile Include="ViewModels\Subject\AdminSubjectViewModel.cs" />
     <Compile Include="ViewModels\TitleBarViewModel.cs" />
     <Compile Include="ViewModels\UserInfo\ChangePasswordViewModel.cs" />
+    <Compile Include="ViewModels\UserInfo\DeleteInfoItemViewModel.cs" />
+    <Compile Include="ViewModels\UserInfo\EditInfoItemViewModel.cs" />
+    <Compile Include="ViewModels\UserInfo\InfoItemViewModel.cs" />
+    <Compile Include="ViewModels\UserInfo\SettingUserInfoViewModel.cs" />
+    <Compile Include="ViewModels\UserInfo\UserInfoItemViewModel.cs" />
+    <Compile Include="ViewModels\UserInfo\UserInfoViewModel.cs" />
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -470,6 +532,7 @@
       <LastGenOutput>ManagermentEnglish.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

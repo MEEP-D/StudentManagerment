@@ -6,10 +6,11 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using StudentManagerment.Utils;
+using StudentManagement.Utils;
 using System.Net;
+using StudentManagerment.Utils;
 
-namespace StudentManagement.Services
+namespace StudentManagerment.Service
 {
 	public class FileUploader
 	{
@@ -124,33 +125,20 @@ namespace StudentManagement.Services
 				return "accountToken=" + newToken;
 			}
 		}
-		//public async Task DownloadFileAsync(string link, string fileName)
-		//{
-		//	var url = new Uri(link);
-		//	WebClient webClient = new WebClient();
-		//	webClient.Headers.Add(HttpRequestHeader.Cookie, await GetCookieAsync(TempToken));
-		//	await webClient.DownloadFileTaskAsync(url, fileName);
-		//}
-
-		//public async Task<byte[]> DownloadFileAsByteAsync(string link)
-		//{
-		//	WebClient webClient = new WebClient();
-		//	webClient.Headers.Add(HttpRequestHeader.Cookie, await GetCookieAsync(TempToken));
-		//	return await webClient.DownloadDataTaskAsync(new Uri(link));
-		//}
 
 		public async Task DownloadFileAsync(string link, string fileName)
 		{
 			var url = new Uri(link);
-			using WebClient webClient = new WebClient();
+			WebClient webClient = new WebClient();
+			webClient.Headers.Add(HttpRequestHeader.Cookie, await GetCookieAsync(TempToken));
 			await webClient.DownloadFileTaskAsync(url, fileName);
 		}
 
 		public async Task<byte[]> DownloadFileAsByteAsync(string link)
 		{
-			using WebClient webClient = new WebClient();
+			WebClient webClient = new WebClient();
+			webClient.Headers.Add(HttpRequestHeader.Cookie, await GetCookieAsync(TempToken));
 			return await webClient.DownloadDataTaskAsync(new Uri(link));
 		}
-
 	}
 }

@@ -115,7 +115,7 @@ namespace StudentManagement.Services
 			foreach (var courseRegister in listCourseRegister)
 			{
 				//not sent to the poster if poster is student
-				if (LoginServices.CurrentUser.UserRole.Role == "Sinh viên")
+				if (LoginServices.CurrentUser.UserRole.Role == "học viên")
 				{
 					if (StudentServices.Instance.FindStudentByUserId(LoginServices.CurrentUser.Id).Id == courseRegister.IdStudent)
 						continue;

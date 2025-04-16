@@ -46,7 +46,7 @@ namespace StudentManagerment.Objects
 		{
 			ID = student.IdUsers;
 			DisplayName = UserServices.Instance.GetDisplayNameById(ID.Value);
-			Role = "Sinh viên";
+			Role = "học viên";
 		}
 
 		// Constructor từ đối tượng Teacher

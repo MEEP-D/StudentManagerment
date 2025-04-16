@@ -1,0 +1,66 @@
+﻿using StudentManagerment.Commands;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using static StudentManagerment.ViewModels.AdminSubjectClassViewModel;
+using StudentManagerment.Objects;
+using StudentManagerment.Service;
+using System.Windows.Forms;
+using StudentManagerment.Commands;
+using StudentManagerment.Objects;
+using StudentManagerment.ViewModels;
+
+namespace StudentManagerment.ViewModels
+{
+	public class AdminSubjectClassRightSideBarItemViewModel : BaseViewModel
+	{
+		public SubjectClassCard CurrentCard { get => _currentCard; set => _currentCard = value; }
+		private SubjectClassCard _currentCard;
+
+		public ICommand ClickChangeImageCommand { get; set; }
+
+		public AdminSubjectClassRightSideBarItemViewModel()
+		{
+			CurrentCard = null;
+		}
+
+		public AdminSubjectClassRightSideBarItemViewModel(SubjectClassCard card)
+		{
+			CurrentCard = card;
+
+			ClickChangeImageCommand = new RelayCommand<object>(
+			(p) => { return true; },
+			async (p) =>
+			{
+				OpenFileDialog op = new OpenFileDialog
+				{
+					Title = "Select a picture",
+					Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" + "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" + "Portable Network Graphic (*.png)|*.png"
+				};
+				if (op.ShowDialog() == DialogResult.OK)
+				{
+					try
+					{
+						CurrentCard.Image = op.FileName;
+						var uploadImageTasks = new List<Task<string>>();
+						uploadImageTasks.Add(ImageUploader.Instance.UploadAsync(CurrentCard.Image));
+						foreach (var img in await Task.WhenAll(uploadImageTasks))
+						{
+							CurrentCard.Image = img;
+						}
+						await SubjectClassServices.Instance.SaveSubjectClassCardToDatabase(CurrentCard);
+						CurrentCard.RunOnPropertyChanged();
+					}
+					catch
+					{
+						MyMessageBox.Show("Đã có lỗi trong cập nhật ảnh đại diện", "Thông báo", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+					}
+
+				}
+			});
+		}
+	}
+}

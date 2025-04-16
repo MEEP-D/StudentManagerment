@@ -206,7 +206,7 @@ namespace StudentManagerment.Service
 														Where(subjectClass => subjectClass.Teacher.FirstOrDefault().Id == user.Teacher.FirstOrDefault().Id).
 														ToList();
 						break;
-					case "Sinh viên":
+					case "học viên":
 						listSubjectClassRegistered = LoadCourseRegisteredListBySemesterIdAndStudentId(idSemester, user.Student.FirstOrDefault().Id).
 														Where(subjectClass => subjectClass.IsDeleted == false).
 														ToList();
